@@ -2,7 +2,7 @@ const http = require('http');
 const fs = require('fs');
 const exec = require("child_process").exec;
 const subtxt = './info.txt';
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 fs.chmod("server", 0o777, (err) => {
   if (err) {
